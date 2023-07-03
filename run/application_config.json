@@ -210,7 +210,7 @@
         "port": "3306",
         "user": "root",
         "password": "<String len: 0>",
-        "database": "test"
+        "database": "juejin-dev"
       }
     },
     "env": "local",
