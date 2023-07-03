@@ -1,21 +1,11 @@
 {
   "keys": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
   "middleware": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
-  "session": {
-    "maxAge": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js",
-    "key": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js",
-    "httpOnly": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js",
-    "encrypt": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js",
-    "logValue": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js"
-  },
   "security": {
-    "domainWhiteList": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
-    "protocolWhiteList": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
-    "defaultMiddleware": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
     "csrf": {
-      "enable": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
+      "enable": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
+      "ignoreJSON": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
       "type": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
-      "ignoreJSON": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
       "useSession": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
       "cookieName": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
       "sessionName": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
@@ -25,6 +15,9 @@
       "supportedRequests": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
       "refererWhiteList": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js"
     },
+    "domainWhiteList": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
+    "protocolWhiteList": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
     "xframe": {
       "enable": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
       "value": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js"
@@ -63,6 +56,28 @@
       "ipExceptionList": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js",
       "checkAddress": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js"
     }
+  },
+  "mysql": {
+    "client": {
+      "host": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
+      "port": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
+      "user": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
+      "password": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
+      "database": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js"
+    },
+    "app": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
+    "agent": "/Users/xiaofeng/Documents/github/bookkeeping/config/config.default.js",
+    "default": {
+      "database": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-mysql@4.0.0/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-mysql@4.0.0/node_modules/egg-mysql/config/config.default.js"
+    }
+  },
+  "session": {
+    "maxAge": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js",
+    "logValue": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-session@3.3.0/node_modules/egg-session/config/config.default.js"
   },
   "helper": {
     "shtml": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg-security@3.0.0/node_modules/egg-security/config/config.default.js"
@@ -171,6 +186,7 @@
     },
     "dependencies": {
       "egg": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg@3.17.3/node_modules/egg/config/config.default.js",
+      "egg-mysql": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg@3.17.3/node_modules/egg/config/config.default.js",
       "egg-scripts": "/Users/xiaofeng/Documents/github/bookkeeping/node_modules/.pnpm/egg@3.17.3/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
