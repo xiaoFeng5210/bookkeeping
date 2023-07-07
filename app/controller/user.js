@@ -48,6 +48,42 @@ class UserController extends Controller {
       }
     }
   }
+
+  async login() {
+    const {ctx, app} = this
+    const {username, password} = ctx.request.body
+    const userInfo = await ctx.service.user.getUserByName(username)
+    if (!userInfo || !userInfo.id) {
+      ctx.body = {
+        code: 500,
+        msg: '用户不存在',
+        data: null
+      }
+      return
+    }
+
+    if (userInfo && password !== userInfo.password) {
+      ctx.body = {
+        code: 500,
+        msg: '密码错误',
+        data: null
+      }
+      return
+    }
+
+    const token = app.jwt.sign({
+      id: userInfo.id,
+      username: userInfo.username,
+      exp: Math.floor(Date.now() / 1000) + (24 * 60 * 60) // token 有效期为 24 小时
+      
+    }, app.config.jwt.secret)
+
+    ctx.body = {
+      code: 200,
+      msg: '登录成功',
+      data: {token}
+    }
+  }
 }
 
 module.exports = UserController
