@@ -14,6 +14,17 @@ class UserService extends Service {
       return null
     }
   }
+
+  async register(params) {
+    const {app} = this
+    try {
+      const result = await app.mysql.insert('user', params)
+      return result
+    } catch (error) {
+      console.log(error)
+      return null
+    }
+  }
 }
 
 module.exports = UserService;
