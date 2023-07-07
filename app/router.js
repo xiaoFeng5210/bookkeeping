@@ -11,4 +11,6 @@ module.exports = app => {
   router.post('/edit_user', controller.home.editUser);
   router.post('/delete_user', controller.home.deleteUser);
   router.post('/add_user', controller.home.addUser);
+
+  router.post('/api/user/register', controller.user.register);
 };
