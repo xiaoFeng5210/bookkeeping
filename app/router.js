@@ -4,7 +4,9 @@
  * @param {Egg.Application} app - egg application
  */
 module.exports = app => {
-  const { router, controller } = app;
+  const { router, controller, middleware } = app;
+  const _jwt = middleware.jwtErr(app.config.jwt.secret); // 传入加密字符串
+
   router.get('/', controller.home.index);
   // router.get('/user/:id', controller.home.user);
   // router.get('/users', controller.home.user)
