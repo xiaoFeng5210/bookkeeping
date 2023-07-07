@@ -4,8 +4,8 @@ const Controller = require('egg').Controller
 
 class UserController extends Controller {
   async register() {
-    const {ctx} = this
-    const {username, password} = ctx.request.body
+    const { ctx } = this
+    const { username, password } = ctx.request.body
 
     if (!username || !password) {
       ctx.body = {
@@ -50,8 +50,8 @@ class UserController extends Controller {
   }
 
   async login() {
-    const {ctx, app} = this
-    const {username, password} = ctx.request.body
+    const { ctx, app } = this
+    const { username, password } = ctx.request.body
     const userInfo = await ctx.service.user.getUserByName(username)
     if (!userInfo || !userInfo.id) {
       ctx.body = {
@@ -75,13 +75,24 @@ class UserController extends Controller {
       id: userInfo.id,
       username: userInfo.username,
       exp: Math.floor(Date.now() / 1000) + (24 * 60 * 60) // token 有效期为 24 小时
-      
     }, app.config.jwt.secret)
 
     ctx.body = {
       code: 200,
       msg: '登录成功',
-      data: {token}
+      data: { token }
+    }
+  }
+
+  async getUserInfo() {
+    const { ctx, app } = this
+    const token = ctx.request.header.authorization
+    // 解码token
+    const decode = app.jwt.verify(token, app.config.jwt.secret)
+    ctx.body = {
+      code: 200,
+      msg: '获取成功',
+      data: decode
     }
   }
 }
