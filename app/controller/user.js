@@ -14,6 +14,17 @@ class UserController extends Controller {
         data: null
       }
     }
+
+    const userInfo = await ctx.service.user.getUserByName(username)
+
+    if (userInfo && userInfo.id) {
+      ctx.body = {
+        code: 500,
+        msg: '用户已存在',
+        data: null
+      }
+      return
+    }
   }
 }
 
